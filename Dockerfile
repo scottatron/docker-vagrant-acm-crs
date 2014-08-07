@@ -14,7 +14,7 @@ RUN export LC_ALL=C &&\
     rsync -r /build/php/etc / &&\
     php5enmod yaml memcache-sessions &&\
     echo " ---> Installing Memcached" &&\
-    $minimal_apt_get_install -y memcached &&\
+    apt-get install -y memcached &&\
     rsync -r /build/memcached/etc / &&\
     echo " ---> Install Node.js" &&\
     $minimal_apt_get_install -y nodejs &&\
